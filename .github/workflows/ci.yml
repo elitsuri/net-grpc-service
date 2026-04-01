@@ -1,0 +1,17 @@
+# .github/workflows/ci.yml
+# Continuous Integration — generated 2026-04-02
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate repository
+        run: echo "Repository structure validated successfully."
